@@ -6,7 +6,7 @@ Note that some may not be true equivalences but they can just be used in similar
 | Coq        | HOL4                                  |
 |------------+---------------------------------------|
 | apply      | drule, irule, match_mp_tac            |
-| subst      | rveq                                  |
+| subst      | rveq (from CakeML preamble)           |
 | specialize | qspecl_then                           |
 | eexists    | asm_exists_tac (from CakeML preamble) |
 | rewrite    | once_rewrite_tac, rewrite_tactic, ... |
