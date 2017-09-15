@@ -40,7 +40,7 @@ but instead iterates over the assumptions and applies the first successful (gene
 The tactical `qpat_assum` can be used to pick out assumptions based on a pattern instead of position.
 
 In Coq assumptions can be picked out by patterns using the `match` construct in Ltac. This proof-style
-is advocated, over name-based assumption handling, in e.g. ''Certified Programming with Dependent Types''.
+is advocated, over name-based assumption handling, in e.g. _Certified Programming with Dependent Types_.
 
 ## Automation and subgoals
 
