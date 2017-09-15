@@ -1,5 +1,7 @@
 # Equivalences between tactics in HOL4 and Coq
 
+_This is a work in progress, pull requests and comments more than welcome._
+
 Some approximate equivalences between HOL4 and Coq tactics.
 Note that some may not be true equivalences but they can just be used in similar ways.
 
@@ -70,6 +72,8 @@ Hence the interactive proof-mode is separated from the actual saving of a proven
 
 In contrast, Coq has a separate proof-mode, that can be started after stating a theorem.
 This allows for easily stepping through proofs by just following the structure of the input file.
+
+_TODO: Isn't this simply a property of particular GUIs (Proof General vs. the Emacs mode for HOL4) rather than the actual ITPs?_
 
 ## Foundational differences
 
