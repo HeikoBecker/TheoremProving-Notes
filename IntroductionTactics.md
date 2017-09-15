@@ -26,5 +26,5 @@ Writing theorems in a curried style (`∀ x. P x ==> Q x ==> R x`), these tactic
 
 Both provers can also deal with the same theorem in its uncurried form (`∀ x. P x /\ Q x ==> R x`).
 
-In HOL4, `strip_tac` will automatically apply conjunction elimination to `P x /\ Q x`.
-In Coq, `intros * [H1 H2]` will automatical apply conjunction elimination too, introducing the hypothesis `H1: P x` and `H2: Q x`.
+In HOL4, `strip_tac` will implicitly apply conjunction elimination to `P x /\ Q x`.
+In Coq, `intros * [H1 H2]` will explicitly apply conjunction elimination only when using `[ ]` for the hypothesis to be split, introducing `H1: P x` and `H2: Q x`.
