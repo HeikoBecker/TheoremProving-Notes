@@ -76,6 +76,18 @@ This allows for easily stepping through proofs by just following the structure o
 
 _TODO: Isn't this simply a property of particular GUIs (Proof General vs. the Emacs mode for HOL4) rather than the actual ITPs?_
 
+## Formalization styles
+
+One minor difference between Coq and HOL4 is how theorems with multiple hypotheses are written. In Coq we would write,
+
+    (P -> Q) -> (Q -> P) -> (P <-> Q)
+
+whereas in HOL4 we would write
+
+    (P ==> Q) /\ (Q ==> P) ==> (P = Q)
+
+This, as far as I know, is just a stylistic difference.
+
 ## Proof by reflection/computation
 
 In Coq, so-called proofs by reflection are (seemingly) common. For clarity, this is sometimes called "computational reflection" to differentiate it from other forms of reflection.
