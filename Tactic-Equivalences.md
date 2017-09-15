@@ -76,6 +76,32 @@ This allows for easily stepping through proofs by just following the structure o
 
 _TODO: Isn't this simply a property of particular GUIs (Proof General vs. the Emacs mode for HOL4) rather than the actual ITPs?_
 
+## Proof by reflection/computation
+
+In Coq, so-called proofs by reflection are (seemingly) common. For clarity, this is sometimes called "computational reflection" to differentiate it from other forms of reflection.
+For example, in Coq, we have the the Mathematical Components (ssreflect) library. Also, simply Googeling for "reflection coq" results in many relevant hits.
+
+Two reflection tutorials for Coq: [Speeding Up Proofs with Computational Reflection](https://gmalecha.github.io/reflections/2017/speeding-up-proofs-with-computational-reflection) (2017)
+and [Proofs by Reflection, Tactic Language](https://www.lri.fr/~paulin/MPRI/cours-refl.pdf) (2011).
+
+To automate the lifting of the goal to "syntax" one can use either Ltac or write a specialized plugin (in OCaml) in Coq, whereas in HOL4 one would do this in SML directly.
+Harrison has done a comparison of reflection in the Coq and HOL: [Computation and reflection in Coq and HOL](http://www.cl.cam.ac.uk/~jrh13/slides/nijmegen-20aug03/slides.pdf) (2003).
+Reduction in HOL4 is not at fast as in Coq, see the slides for details. (Isabelle/HOL has "support" for reflection, where reductions can be made fast by translating terms to SML for compilation.
+But how do they automate the lift to syntax?)
+
+_TODO: Port some reflection example written in Coq to HOL4 as an illustration. E.g. Chlipala's example from the DeepSpec summer school._
+
+## Metavariables
+
+Coq has metavariables (introduced by e.g. `eapply` or `eexists`). HOL4 does not have a corresponding concept. (Isabelle/HOL has "schematic variables".)
+
+## Type classes
+
+Coq has type classes (in the same way as in e.g. Haskell). HOL4 has not. (Isabelle/HOL has.)
+
+In some cases there are workarounds for this. For example, do-syntax is available for monomorphized monads. See e.g. `candle/standard/monadic/holKernelProofScript.sml` from CakeML.
+But you still have to duplicate monad theorems and functions, but at least you get the syntax.
+
 ## Foundational differences
 
 The underlying logic in Coq is constructive and based on the type theory the calculus of (co)inductive
