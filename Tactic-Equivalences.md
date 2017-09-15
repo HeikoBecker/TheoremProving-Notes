@@ -3,21 +3,21 @@
 Some approximate equivalences between HOL4 and Coq tactics.
 Note that some may not be true equivalences but they can just be used in similar ways.
 
-| Coq                      | HOL4                                      | Comment                       | Link                                        |
-|--------------------------|-------------------------------------------|-------------------------------|---------------------------------------------|
-| `apply` _thm_            | `drule`/`irule`/`match_mp_tac` _thm_      |                               |                                             |
-| `apply` _asm_            | `first_assum match_mp_tac`                | Or similar tactical or tactic |                                             |
-| `apply` _thm_ `in` _asm_ | `imp_res_tac` _thm_                       |                               |                                             |
-| `apply` _asm_ `in` _asm_ | `res_tac`                                 |                               |                                             |
-| `subst`                  | `rveq` (from CakeML preamble)             |                               |                                             |
-| `specialize`             | `qspecl_then`                             |                               |                                             |
-| `eexists`                | `asm_exists_tac` (from CakeML preamble)   | Weak correspondence           |                                             |
-| `rewrite`                | `once_rewrite_tac`, `rewrite_tactic`, ... |                               |                                             |
-| `simpl in *`             | `fs`                                      |                               |                                             |
-| `auto`                   | `rw`                                      | Weak correspondence           |                                             |
-| `destruct`               | `Cases`, `Cases_on`, `PairCases_on`       |                               |                                             |
-| `induction`              | `Induct`, `Induct_on`                     |                               |                                             |
-| `intros`                 | `rpt strip_tac`                           | `strip_tac` does more         |[IntroductionTactics](IntroductionTactics.md)|
+| Coq                      | HOL4                                      | Comment                                  | Link                                        |
+|--------------------------|-------------------------------------------|------------------------------------------|---------------------------------------------|
+| `apply` _thm_            | `drule`/`irule`/`match_mp_tac` _thm_      |                                          |                                             |
+| `apply` _asm_            | `first_assum match_mp_tac`                | Or similar tactical or tactic            |                                             |
+| `apply` _thm_ `in` _asm_ | `imp_res_tac` _thm_                       |                                          |                                             |
+| `apply` _asm_ `in` _asm_ | `res_tac`                                 |                                          |                                             |
+| `subst`                  | `rveq` (from CakeML preamble)             |                                          |                                             |
+| `specialize`             | `qspecl_then`                             |                                          |                                             |
+| `eexists`                | `asm_exists_tac` (from CakeML preamble)   | Weak correspondence                      |                                             |
+| `rewrite`                | `once_rewrite_tac`, `rewrite_tactic`, ... |                                          |                                             |
+| `simpl in *`             | `fs`                                      |                                          |                                             |
+| `auto`                   | `rw`                                      | Weak correspondence                      |                                             |
+| `destruct`               | `Cases`, `Cases_on`, `PairCases_on`       |                                          |                                             |
+| `induction`              | `Induct`, `Induct_on`                     | subtle differences (e.g. rule induction) |[InductionTactics](InductionTactics.md)      |
+| `intros`                 | `rpt strip_tac`                           | `strip_tac` does more                    |[IntroductionTactics](IntroductionTactics.md)|
 
 ## Assumption handling
 
