@@ -16,10 +16,11 @@ Note that some may not be true equivalences but they can just be used in similar
 | `eexists`                | `asm_exists_tac` (from CakeML preamble)   | Weak correspondence                      |                                             |
 | `rewrite`                | `once_rewrite_tac`, `rewrite_tactic`, ... |                                          |                                             |
 | `simpl in *`             | `fs`                                      |                                          |                                             |
-| `auto`                   | `rw`                                      | Weak correspondence                      |                                             |
+| `auto`                   | `metis_tac`, `rw`                         | Weak correspondence                      |                                             |
 | `destruct`               | `Cases`, `Cases_on`, `PairCases_on`       |                                          |                                             |
 | `induction`              | `Induct`, `Induct_on`                     | subtle differences (e.g. rule induction) |[InductionTactics](InductionTactics.md)      |
 | `intros`                 | `rpt strip_tac`                           | `strip_tac` does more                    |[IntroductionTactics](IntroductionTactics.md)|
+| `split`                  | `EQ_TAC`                                  | `split` can also split other connectives |                                             |
 
 ## Assumption handling
 
