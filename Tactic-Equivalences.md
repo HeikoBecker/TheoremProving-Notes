@@ -21,6 +21,7 @@ Note that some may not be true equivalences but they can just be used in similar
 | `induction`              | `Induct`, `Induct_on`                     | subtle differences (e.g. rule induction) |[InductionTactics](InductionTactics.md)      |
 | `intros`                 | `rpt strip_tac`                           | `strip_tac` does more                    |[IntroductionTactics](IntroductionTactics.md)|
 | `split`                  | `EQ_TAC`                                  | `split` can also split other connectives |                                             |
+| `revert`                  | `qid_spec_tac`                                  | `revert` works also for assumptions, `qid_spec_tac` only for variables |                                             |
 
 ## Assumption handling
 
